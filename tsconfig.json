@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"declaration": false,
+		"esModuleInterop": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"noEmitOnError": true,
+		"experimentalDecorators": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"outDir": "./dist",
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "es2020",
+		"lib": ["es2020"],
+		"rootDir": ".",
+		"rootDirs": ["."],
+		"baseUrl": ".",
+		"sourceMap": false,
+		"paths": {
+			"@/*": ["src/*"]
+		},
+		"plugins": []
+	},
+	"include": [".eslintrc.js", "src/**/*", "index.ts"],
+	"exclude": ["dist/**/*", "node_modules", "packages/*", "tests/**/*", "build/**/*"]
+}
