@@ -25,6 +25,8 @@
 		"eslint": "^8.45.0",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-prettier": "^5.0.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.3",
 		"shelljs": "^0.8.5",
 		"tsc-alias": "^1.8.7",
 		"typescript": "^5.1.6"
@@ -33,5 +35,8 @@
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
 		}
+	},
+	"lint-staged": {
+		"*.{tsx,ts}": "eslint --fix --ext .js,.ts ./"
 	}
 }
