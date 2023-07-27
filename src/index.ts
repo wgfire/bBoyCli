@@ -1,7 +1,4 @@
-import { name } from "@/toolkit/index"
-
-const c = function (d: string) {
-	console.log(d)
+import { git } from "./toolkit"
+export const toolKitCommand = {
+	git
 }
-
-c(name)

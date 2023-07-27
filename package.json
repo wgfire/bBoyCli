@@ -1,14 +1,17 @@
 {
-	"name": "bboycli",
+	"name": "b-boy",
 	"version": "0.1.0",
 	"description": "cli command",
 	"main": "index.ts",
 	"scripts": {
 		"commit": "cz",
-		"tsc:build": "tsc && tsc-alias",
+		"tsc:build": "tsc && tsc-alias && npm link",
 		"lint": "eslint --ext .tsx,.ts ./",
 		"lint:fix": "eslint --fix --ext .js,.ts ./",
 		"build": "node build/index.js"
+	},
+	"bin": {
+		"b-boy": "dist/index.js"
 	},
 	"keywords": [
 		"cli"
@@ -18,9 +21,12 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.6.7",
 		"@commitlint/config-conventional": "^17.6.7",
+		"@types/commander": "^2.12.2",
 		"@types/node": "^20.4.2",
+		"@types/shelljs": "^0.8.12",
 		"@typescript-eslint/eslint-plugin": "^6.1.0",
 		"@typescript-eslint/parser": "^6.1.0",
+		"commander": "^11.0.0",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.45.0",
 		"eslint-config-prettier": "^8.8.0",
