@@ -1,4 +1,5 @@
-import { git } from "./toolkit"
+import { gitCommand, viteCommand } from "./toolkit"
 export const toolKitCommand = {
-	git
+	gitCommand,
+	viteCommand
 }
