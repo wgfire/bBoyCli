@@ -16,14 +16,14 @@ export const runCommitCZ = () => {
 	})
 }
 
-export const parseGitPushOptions = (options: { force?: boolean; setUpstream?: boolean; deleteRemote?: string }) => {
+export const parseGitPushOptions = (options: { force?: boolean; setUpstream?: string; deleteRemote?: string }) => {
 	const pushOptions = []
 
 	if (options.force) {
 		pushOptions.push("--force")
 	}
 	if (options.setUpstream) {
-		pushOptions.push("--set-upstream")
+		pushOptions.push(`--set-upstream ${options.setUpstream}`)
 	}
 	if (options.deleteRemote) {
 		pushOptions.push(`--delete ${options.deleteRemote}`)
