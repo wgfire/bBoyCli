@@ -1,6 +1,6 @@
 import { Command } from "commander"
 import shell from "shelljs"
-import { parseGitPushOptions, runCommitCZ } from "./utils"
+import { PushOptions, parseGitPushOptions, runCommitCZ } from "./utils"
 const program = new Command()
 export const gitCommand = program
 
@@ -9,7 +9,7 @@ export const gitCommand = program
 	.option("-f, --force", "Force push")
 	.option("-u, --set-upstream ", "Set upstream branch")
 	.option("-d, --delete-remote <remote>", "Delete remote branch")
-	.action((args: string[], options: { force?: boolean; setUpstream?: string; deleteRemote?: string }) => {
+	.action((args: string[], options: PushOptions) => {
 		console.log(options, "options")
 		shell.exec("git add .")
 		/**移除push后的参数，否则cz-cli 执行 git commit -m argv 会跟命令参数*/

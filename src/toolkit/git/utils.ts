@@ -3,6 +3,17 @@
 import { bootstrap } from "commitizen/dist/cli/git-cz"
 import path from "path"
 
+export type PushOptions = {
+	force?: boolean
+	setUpstream?: string
+	deleteRemote?: string
+}
+
+/**
+ * This function runs the commitizen command-line interface (CLI) to initialize the commitizen tool.
+ *
+ * @return {void} This function does not return any value.
+ */
 export const runCommitCZ = () => {
 	const cliPath = path.join(__dirname, "../../../../node_modules/commitizen")
 	console.log(cliPath, "czpath", process.argv)
@@ -16,7 +27,13 @@ export const runCommitCZ = () => {
 	})
 }
 
-export const parseGitPushOptions = (options: { force?: boolean; setUpstream?: string; deleteRemote?: string }) => {
+/**
+ * Parses the git push options and returns an array of options to be used with the push command.
+ *
+ * @param {PushOptions} options - The options object.
+ * @return {Array} - An array of push options to be used with the git push command.
+ */
+export const parseGitPushOptions = (options: PushOptions) => {
 	const pushOptions = []
 
 	if (options.force) {

@@ -6,6 +6,6 @@ export const eslintCommand = program
 	.command("eslint [args...]")
 	.description("Use eslint lint files")
 
-	.action((args: string[], options: { force?: boolean; setUpstream?: boolean; deleteRemote?: string }) => {
+	.action((args: string[], options: any) => {
 		shell.exec("git add .")
 	})
