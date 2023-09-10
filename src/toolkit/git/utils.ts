@@ -2,7 +2,7 @@
 //@ts-nocheck
 import { bootstrap } from "commitizen/dist/cli/git-cz"
 import path from "path"
-
+import { useInquirer } from "@/hooks/inquirer/useInquirer"
 export type PushOptions = {
 	force?: boolean
 	setUpstream?: string
