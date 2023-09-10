@@ -21,10 +21,10 @@ export const gitCommand = program
 		const message = await useInquirer()
 		const commitCommand = ["commit", "-m", message]
 		console.log(commitCommand, "commit命令")
-		const result = spawn("git", commitCommand, { stdio: "inherit" })
+		spawn("git", commitCommand, { stdio: "inherit" })
 
 		const pushOptions = parseGitPushOptions(options)
 		const command = `git push ${args.join(" ")} ${pushOptions.join(" ")}`
 		console.log(command, "push命令")
-		// shell.exec(command)
+		shell.exec(command)
 	})
