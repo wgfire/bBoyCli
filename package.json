@@ -1,11 +1,11 @@
 {
-	"name": "bboy",
+	"name": "bboy-cli",
 	"version": "0.1.0",
 	"description": "cli command",
 	"main": "index.ts",
 	"scripts": {
 		"commit": "cz",
-		"tsc:build": "tsc && tsc-alias",
+		"tsc:build": "tsc --build",
 		"lint": "eslint --ext .tsx,.ts ./",
 		"lint:fix": "eslint --fix --ext .js,.ts ./",
 		"build": "node build/index.js"
@@ -19,6 +19,10 @@
 	"author": "wgfire",
 	"license": "ISC",
 	"devDependencies": {
+		"@babel/cli": "^7.22.15",
+		"@babel/core": "^7.22.20",
+		"@babel/preset-env": "^7.22.20",
+		"@babel/preset-typescript": "^7.22.15",
 		"@commitlint/cli": "^17.6.7",
 		"@commitlint/config-conventional": "^17.6.7",
 		"@types/commander": "^2.12.2",
@@ -29,14 +33,12 @@
 		"@typescript-eslint/eslint-plugin": "^6.1.0",
 		"@typescript-eslint/parser": "^6.1.0",
 		"@vitejs/plugin-react": "^4.0.4",
-		"commander": "^11.0.0",
+		"babel-plugin-module-resolver": "^5.0.0",
 		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^8.45.0",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-prettier": "^5.0.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.3",
-		"shelljs": "^0.8.5",
 		"tsc-alias": "^1.8.7",
 		"typescript": "^5.1.6",
 		"vite": "^4.4.8"
@@ -50,6 +52,9 @@
 		"*.{tsx,ts}": "eslint --fix --ext .js,.ts ./"
 	},
 	"dependencies": {
-		"inquirer": "^8.2.5"
+		"commander": "^11.0.0",
+		"eslint": "^8.45.0",
+		"inquirer": "^8.2.5",
+		"shelljs": "^0.8.5"
 	}
 }

@@ -1,6 +1,6 @@
 import { Command } from "commander"
 import shell from "shelljs"
-import { PushOptions, parseGitPushOptions, runCommitCZ } from "./utils"
+import { PushOptions, parseGitPushOptions } from "./utils"
 import { useInquirer } from "@/hooks/inquirer/useInquirer"
 import { spawn } from "node:child_process"
 const program = new Command()
