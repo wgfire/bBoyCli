@@ -5,7 +5,8 @@
 	"main": "index.ts",
 	"scripts": {
 		"commit": "cz",
-		"tsc:build": "tsc --build",
+		"tsc:build": "tsc && tsc-alias",
+		"dist": "npx --no-install babel src -d dist -x \".ts\" ",
 		"lint": "eslint --ext .tsx,.ts ./",
 		"lint:fix": "eslint --fix --ext .js,.ts ./",
 		"build": "node build/index.js"
