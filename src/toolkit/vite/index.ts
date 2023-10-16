@@ -1,0 +1,1 @@
+export { viteCommand } from "./command"
