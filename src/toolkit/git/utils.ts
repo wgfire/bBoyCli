@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 //@ts-nocheck
-import { bootstrap } from "commitizen/dist/cli/git-cz"
+// import { bootstrap } from "commitizen/dist/cli/git-cz"
 import path from "path"
-import { useInquirer } from "@/hooks/inquirer/useInquirer"
+
 export type PushOptions = {
 	force?: boolean
 	setUpstream?: string
@@ -19,12 +19,12 @@ export const runCommitCZ = () => {
 	console.log(cliPath, "czpath", process.argv)
 
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-	bootstrap({
-		cliPath,
-		config: {
-			path: "cz-conventional-changelog"
-		}
-	})
+	// bootstrap({
+	// 	cliPath,
+	// 	config: {
+	// 		path: "cz-conventional-changelog"
+	// 	}
+	// })
 }
 
 /**
