@@ -8,4 +8,5 @@ const program = new Command()
 
 program.addCommand(toolKitCommand.gitCommand)
 program.addCommand(toolKitCommand.viteCommand)
+program.addCommand(toolKitCommand.openAiCommand)
 program.parse(process.argv)
