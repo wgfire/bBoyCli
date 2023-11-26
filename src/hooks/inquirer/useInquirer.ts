@@ -16,7 +16,7 @@ type commitMessage = {
 type commitHeadMap = {
 	[key in CommitType]?: string
 }
-const createCommitHeade = (answers: commitMessage) => {
+const createCommitHade = (answers: commitMessage) => {
 	const { type, updateScope, featScope } = answers
 	const commitHeadMap: commitHeadMap = {
 		feat: `[${featScope}]${type}`,
@@ -32,11 +32,9 @@ const createCommitHeade = (answers: commitMessage) => {
 const createInquirer = async () => {
 	const answers = await inquirer.prompt(questions)
 	const { scope, description } = answers
-	const commitHead = createCommitHeade(answers as commitMessage)
+	const commitHead = createCommitHade(answers as commitMessage)
 
-	const commitMessage = `${commitHead}: ${scope}
-    ${description}
-  `
+	const commitMessage = `${commitHead}(${scope}):${description}`
 	// 输出生成的提交消息
 	console.log("生成的提交消息:")
 	console.log(commitMessage)
