@@ -5,10 +5,10 @@
 	"main": "index.ts",
 	"scripts": {
 		"commit": "cz",
-		"tsc:build": "tsc --build && tsc-alias",
+		"tsc:build": "set NODE_ENV=prod && tsc --build && tsc-alias",
 		"lint": "eslint --ext .tsx,.ts ./",
 		"lint:fix": "eslint --fix --ext .js,.ts ./",
-		"build": "node build/index.js"
+		"build": "set NODE_ENV=prod && node build/index.js"
 	},
 	"bin": {
 		"bboy": "dist/index.js"
@@ -53,9 +53,11 @@
 	"dependencies": {
 		"axios": "^1.6.2",
 		"commander": "^11.0.0",
+		"dotenv": "^16.3.1",
 		"eslint": "^8.45.0",
 		"inquirer": "^8.2.5",
 		"shelljs": "^0.8.5",
+		"typechat": "^0.0.10",
 		"vite": "^4.4.8"
 	}
 }
