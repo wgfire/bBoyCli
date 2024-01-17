@@ -5,10 +5,10 @@
 	"main": "index.ts",
 	"scripts": {
 		"commit": "cz",
-		"tsc:build": "set NODE_ENV=prod && tsc --build && tsc-alias",
+		"tsc:build": " tsc --build && tsc-alias",
 		"lint": "eslint --ext .tsx,.ts ./",
 		"lint:fix": "eslint --fix --ext .js,.ts ./",
-		"build": "set NODE_ENV=prod && node build/index.js"
+		"build": "node build/index.js"
 	},
 	"bin": {
 		"bboy": "dist/index.js"

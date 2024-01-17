@@ -22,6 +22,6 @@
 		},
 		"plugins": []
 	},
-	"include": [".eslintrc.js", "src/**/*", "index.ts"],
+	"include": [".eslintrc.js", "src/**/*", "index.ts", "global.d.ts"],
 	"exclude": ["dist/**/*", "node_modules", "packages/*", "tests/**/*", "build/**/*"]
 }

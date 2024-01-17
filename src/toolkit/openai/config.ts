@@ -1,23 +1,28 @@
-import { ConfigProvider } from "./type"
-
 module.exports = {
-	locals: {
-		CN: {
-			name: "中文",
-			path: "./locals/cn.json",
-			content: {
-				Yong_Hu_Shi_Li: "用户实例"
-			}
+	i18FolderPath: "./locales",
+	language: [
+		{
+			language: "zh-CN",
+			languageName: "中文简体",
+			fileName: "zh-CN.json"
 		},
-		EN: {
-			name: "英文",
-			path: "./locals/en.json",
-			content: {
-				Yong_Hu_Shi_Li: "User Instance"
-			}
+		{
+			language: "en-US",
+			languageName: "English",
+			fileName: "en-US.json"
+		},
+		{
+			language: "zh-TW",
+			languageName: "中文繁體",
+			fileName: "zh-TW.json"
+		},
+		{
+			language: "ja-JP",
+			languageName: "日本語",
+			fileName: "ja-JP.json"
 		}
-	}
-} as ConfigProvider
+	]
+} as unknown as BboyConfigProps["i18n"]
 
 // const data: ResponseData = {
 // 	fileContent: "XX"
